@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/learn-german-fe/static/css/main.b0393f16.css",
-    "main.js": "/learn-german-fe/static/js/main.aa0a834c.js",
-    "static/media/learning-german.mp4": "/learn-german-fe/static/media/learning-german.ab41aee4efb91e0cf13e.mp4",
-    "static/media/languages.jpg": "/learn-german-fe/static/media/languages.3aaa02a2043cef8bb936.jpg",
-    "static/media/learng.jpg": "/learn-german-fe/static/media/learng.7afd04aa09e933ed30b7.jpg",
-    "static/media/deuschland.jpg": "/learn-german-fe/static/media/deuschland.ce8a9eb1994ef4d63aff.jpg",
-    "index.html": "/learn-german-fe/index.html",
-    "main.b0393f16.css.map": "/learn-german-fe/static/css/main.b0393f16.css.map",
-    "main.aa0a834c.js.map": "/learn-german-fe/static/js/main.aa0a834c.js.map"
+    "main.css": "/learn-german/static/css/main.b0393f16.css",
+    "main.js": "/learn-german/static/js/main.22957abc.js",
+    "static/media/learning-german.mp4": "/learn-german/static/media/learning-german.ab41aee4efb91e0cf13e.mp4",
+    "static/media/languages.jpg": "/learn-german/static/media/languages.3aaa02a2043cef8bb936.jpg",
+    "static/media/learng.jpg": "/learn-german/static/media/learng.7afd04aa09e933ed30b7.jpg",
+    "static/media/deuschland.jpg": "/learn-german/static/media/deuschland.ce8a9eb1994ef4d63aff.jpg",
+    "index.html": "/learn-german/index.html",
+    "main.b0393f16.css.map": "/learn-german/static/css/main.b0393f16.css.map",
+    "main.22957abc.js.map": "/learn-german/static/js/main.22957abc.js.map"
   },
   "entrypoints": [
     "static/css/main.b0393f16.css",
-    "static/js/main.aa0a834c.js"
+    "static/js/main.22957abc.js"
   ]
 }
