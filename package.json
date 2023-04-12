@@ -2,7 +2,7 @@
   "name": "learn-german",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://omarfarids.github.io/learn-german",
+  "homepage": "https://omarfarids.github.io/learn-german-fe",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@hookform/resolvers": "^3.0.1",
