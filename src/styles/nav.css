@@ -1,0 +1,71 @@
+.logo {
+  font-weight: 300;
+}
+.logo span {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+.nav-items {
+  position: sticky;
+  top: 2px;
+  margin: auto;
+}
+.nav-items__lessons {
+  visibility: hidden;
+  position: absolute;
+  width: 32vw;
+}
+
+@media (min-width: 767px) {
+  .nav-items__lessons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.scroll:hover .nav-items__lessons {
+  visibility: visible;
+}
+.scroll {
+  position: relative;
+}
+.nav-items__item,
+.logo,
+.lesson {
+  padding: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (min-width: 767px) {
+  .nav-items__item,
+  .logo,
+  .lesson {
+    font-weight: 600;
+    padding: 10px;
+    font-size: 1.3rem;
+  }
+}
+
+.nav-search__field {
+  display: none;
+}
+@media (min-width: 480px) {
+  .nav-search__field {
+    display: block;
+    width: 90px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 17.5px;
+    border: 2px solid var(--light-crimson);
+    padding-left: 20px;
+    color: var(--crimson);
+    transition: all 0.5s;
+    font-size: 1rem;
+  }
+  .nav-search__field:focus {
+    width: 250px;
+    padding-left: 10px;
+  }
+}

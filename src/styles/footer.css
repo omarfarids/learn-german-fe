@@ -1,0 +1,14 @@
+.copy-rights {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (min-width: 375px) {
+  .copy-rights {
+    transform: translateX(-50%);
+    left: 50%;
+    width: 350px;
+  }
+}

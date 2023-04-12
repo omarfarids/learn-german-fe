@@ -1,0 +1,16 @@
+.pragraph__difficulty::before {
+  content: "";
+  background: linear-gradient(45deg, #fff 16px, transparent 0),
+    linear-gradient(-45deg, #fff 16px, transparent 0) repeat-x;
+  background-size: 32px 32px;
+  background-position: left bottom;
+  position: absolute;
+  bottom: 0;
+  height: 32px;
+  width: 100%;
+  left: 0;
+}
+
+.pragraph__difficulty {
+  position: relative;
+}

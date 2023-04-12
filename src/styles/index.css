@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./nav.css";
+@import "./difficalty.css";
+@import "./why-german.css";
+@import "./footer.css";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap");
+
+/* ===== general styling ===== */
+*::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(184, 100%, 22%);
+}
+
+*::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(184, 99%, 30%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+body {
+  background-color: hsla(0, 0%, 95%, 0.75);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+ul {
+  list-style: none;
+}
+ol {
+  list-style-position: inside;
+  list-style: decimal;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+p {
+  opacity: 0.8;
+}
+button.quit {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  color: var(--white);
+  font-size: 1.2rem;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  border-radius: 50%;
+  background-color: rgb(255, 99, 71);
+  border: unset;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
