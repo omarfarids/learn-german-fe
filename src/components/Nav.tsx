@@ -6,6 +6,7 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "context/context";
 import Login from "./Login";
 import { Lesson } from "data/dataTypes";
+import { HOME } from "routes/CONSTANTS";
 
 const Nav = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -41,7 +42,7 @@ const Nav = () => {
       </div>
       <nav className="nav-items flex flex-row bg-perfCrimson justify-between items-center">
         <div className="flex flex-row">
-          <Link to="/">
+          <Link to={HOME}>
             <NavItems label="Home" />
           </Link>
           <div className="scroll">
