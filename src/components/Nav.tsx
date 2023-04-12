@@ -51,7 +51,7 @@ const Nav = () => {
                 return (
                   <Link
                     key={lesson.id}
-                    to={`/listen/${lesson.id + 1}`}
+                    to={`/learn-german/listen/${lesson.id + 1}`}
                     state={{ id: lesson.id }}
                   >
                     <li className="lesson text-perfCrimson text-lg flex justify-center items-center cursor-pointer hover:text-perfWhite hover:bg-perfCrimson">
