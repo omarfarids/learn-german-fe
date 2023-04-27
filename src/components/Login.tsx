@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { TextInput } from "@mantine/core";
 import Button from "./Button";
@@ -6,10 +6,12 @@ import { Buffer } from "buffer";
 import { AppContext, URL } from "context/context";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import Spinner from "./Spinner";
 
 const Login = ({ close }: any) => {
   const { setUser } = useContext<any>(AppContext);
   const [loginError, setLoginError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const schema = yup.object().shape({
     email: yup.string().email().required(),
@@ -30,6 +32,7 @@ const Login = ({ close }: any) => {
 
   // user login function
   const login = async (data: any) => {
+    setIsLoading(true);
     fetch(URL + "/login", {
       method: "POST",
       headers: {
@@ -49,10 +52,15 @@ const Login = ({ close }: any) => {
         setLoginError("");
         close();
       })
-      .catch((err) =>
-        setLoginError("You have entered a wrong Email or Password")
-      );
+      .catch((err) => {
+        console.log(err);
+        setLoginError("You have entered a wrong Email or Password");
+      });
   };
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [close]);
 
   return (
     <form
@@ -91,7 +99,13 @@ const Login = ({ close }: any) => {
       <p className="font-semibold text-xs p-3 text-center text-red">
         {loginError}
       </p>
-      <Button label="Submit" type="submit" className="w-full" />
+      {isLoading ? (
+        <div className="w-full relative h-24">
+          <Spinner />
+        </div>
+      ) : (
+        <Button label="Submit" type="submit" className="w-full" />
+      )}
     </form>
   );
 };

@@ -7,6 +7,7 @@ import { AppContext } from "context/context";
 import Login from "./Login";
 import { Lesson } from "data/dataTypes";
 import { HOME } from "routes/CONSTANTS";
+import Spinner from "./Spinner";
 
 const Nav = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -47,7 +48,8 @@ const Nav = () => {
           </Link>
           <div className="scroll">
             <NavItems label="Lessons" />
-            <ul className="nav-items__lessons bg-perfGray h-40 md:h-fit md overflow-y-auto">
+            <ul className="nav-items__lessons bg-perfGray h-40 md:h-40 overflow-y-auto">
+              {!lessons.length && <Spinner />}
               {lessons.map((lesson: Lesson) => {
                 return (
                   <Link
@@ -61,7 +63,6 @@ const Nav = () => {
                   </Link>
                 );
               })}
-              {!lessons && <p>Loading ...</p>}
             </ul>
           </div>
           {!user.firstName ? (
